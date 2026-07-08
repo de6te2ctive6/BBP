@@ -50,7 +50,7 @@ def main():
 
     output.append("\nSuggested nmap command:\n")
     output.append(
-        f'nmap -sV -p{",".join(str(p) for p in sorted(ports))} {" ".join(ips)}'
+        f'nmap -sV -p{",".join(str(p) for p in sorted(ports))} {" ".join(ips)} -oN results.txt'
     )
 
     result = "\n".join(output)
